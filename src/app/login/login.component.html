@@ -1,0 +1,23 @@
+<div id="fondo">
+  <mat-grid-list cols="2" rowHeight="500px">
+    <mat-grid-tile>
+      hola
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h3>Bienvenido por favor inicie sesión</h3>
+      
+      <mat-form-field>
+          <input matInput placeholder="Email" 
+                [formControl]="emailFormControl"
+                [errorStateMatcher]="matcher">
+            <mat-hint>Debe ingresar un email</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Por favor ingrese una direccion de correo valida
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                El correo es <strong>Obligatorio</strong>
+            </mat-error>    
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
