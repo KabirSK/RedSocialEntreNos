@@ -1,23 +1,29 @@
-<div id="fondo">
-  <mat-grid-list cols="2" rowHeight="500px">
-    <mat-grid-tile>
-      hola
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <h3>Bienvenido por favor inicie sesión</h3>
-      
-      <mat-form-field>
-          <input matInput placeholder="Email" 
-                [formControl]="emailFormControl"
-                [errorStateMatcher]="matcher">
-            <mat-hint>Debe ingresar un email</mat-hint>
-            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                Por favor ingrese una direccion de correo valida
-            </mat-error>
-            <mat-error *ngIf="emailFormControl.hasError('required')">
-                El correo es <strong>Obligatorio</strong>
-            </mat-error>    
-      </mat-form-field>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div id="fondo" class="container" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="75">
+  </div>
+  <div fxFlex="20">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>EntreNos - Arte</mat-card-title>
+        <mat-card-subtitle>
+          Bienvenido, inicie sesión. 
+          <br> ¿No tiene una cuenta? 
+          <a href=".">Registrese</a>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Correo Electronico">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Contraseña">
+          </mat-form-field>
+        </div>
+        <button mat-flat-button color="primary">Ingresar</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

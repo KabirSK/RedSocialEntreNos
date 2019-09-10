@@ -8,18 +8,27 @@ import {RouterModule, Routes} from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatCardModule, MatCard} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { RegistroComponent } from './registro/registro.component';
 
 const appRoutes: Routes=[
   {path: '',
    component: LoginComponent,
    pathMatch:'full'
+  },
+  {path:'registro',
+  component:RegistroComponent,
+  pathMatch:'full'
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -32,7 +41,10 @@ const appRoutes: Routes=[
     MatGridListModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
