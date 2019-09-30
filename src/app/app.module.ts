@@ -12,6 +12,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule, MatCard} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { RegistroComponent } from './registro/registro.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/';
 
 const appRoutes: Routes=[
   {path: '',
@@ -44,9 +46,13 @@ const appRoutes: Routes=[
     FlexLayoutModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
   ],
-  providers: [],
+    providers: [
+        MatDatepickerModule
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

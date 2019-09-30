@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b8306526-4adb-4f2d-ad5b-3f38adbf225c/resourceGroups/SocialNetResourceGroup/providers/Microsoft.Web/sites/netentrenos",
+    "appService.deploySubpath": ""
+}
