@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { RegistroComponent } from './registro/registro.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/';
+import { MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material';
+
 
 const appRoutes: Routes=[
   {path: '',
@@ -48,7 +51,9 @@ const appRoutes: Routes=[
     MatButtonModule,
     MatCardModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule ,
+    MatSelectModule,
+    MatFormFieldModule
   ],
     providers: [
         MatDatepickerModule

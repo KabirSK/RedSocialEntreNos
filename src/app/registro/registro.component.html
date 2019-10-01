@@ -2,24 +2,36 @@
   <mat-card-title>Bienvenido</mat-card-title>
   <mat-card-subtitle>Ingrese los datos para crear su cuenta</mat-card-subtitle>
   <mat-card-content>
-    <form class="formulario">
-      <mat-form-field class="formulario-full-width">
-        <input matInput placeholder="Primer Nombre" />
-      </mat-form-field>
-      <mat-form-field class="formulario-full-width">
-        <input matInput placeholder="Segundo Nombre" />
-      </mat-form-field>
-      <mat-form-field class="formulario-full-width">
-        <input matInput placeholder="Primer Apellido" />
-      </mat-form-field>
-      <mat-form-field class="formulario-full-width">
-        <input matInput placeholder="Segundo Apellido" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" />
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </form>
+    <div layout-padding layout-margin>
+      <form name="registro" flex>
+        <mat-form-field flex>
+          <input matInput placeholder="Primer Nombre" />
+        </mat-form-field>
+
+        <mat-form-field flex>
+          <input matInput placeholder="Segundo Nombre" />
+        </mat-form-field>
+
+      </form>
+    </div>
+    <div layout-padding layout-margin>
+      <form name="registro" flex>
+        <mat-form-field flex>
+          <input matInput placeholder="Primer Apellido" />
+        </mat-form-field>
+
+        <mat-form-field flex>
+          <input matInput placeholder="Segundo Apellido" />
+        </mat-form-field>
+
+      </form>
+    </div>
+
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
   </mat-card-content>
 </mat-card>
