@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src\\app",
+    "\\src\\app\\registro",
+    "\\src\\assets"
   ],
   "PreviewInSolutionExplorer": false
 }

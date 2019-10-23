@@ -3,35 +3,55 @@
   <mat-card-subtitle>Ingrese los datos para crear su cuenta</mat-card-subtitle>
   <mat-card-content>
     <div layout-padding layout-margin>
-      <form name="registro" flex>
+      <div [formGroup]="singupFormGroup">
+        <div layout-padding layout-margin>
+          <mat-form-field flex>
+            <input formControlName="signUpUsuario" matInput placeholder="Usuario" />
+          </mat-form-field>
+          <mat-form-field flex>
+            <input formControlName="signUpPassword" matInput placeholder="Contraseña" />
+          </mat-form-field>
+        </div>
         <mat-form-field flex>
-          <input matInput placeholder="Primer Nombre" />
+          <input formControlName="signUpPrimerNombre" matInput placeholder="Primer Nombre" />
         </mat-form-field>
-
         <mat-form-field flex>
-          <input matInput placeholder="Segundo Nombre" />
+          <input formControlName="signUpSegundoNombre" matInput placeholder="Segundo Nombre" />
         </mat-form-field>
-
-      </form>
+        <div layout-padding layout-margin>
+          <mat-form-field flex>
+            <input formControlName="signUpPrimerApellido" matInput placeholder="Primer Apellido" />
+          </mat-form-field>
+          <mat-form-field flex>
+            <input formControlName="signUpSegundoApellido" matInput placeholder="Segundo Apellido" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field flex>
+            <input formControlName="signUpCorreo" matInput placeholder="Correo Electronico" />
+          </mat-form-field>
+        </div>
+        <mat-form-field>
+          <input formControlName="signUpFechaNacimiento" matInput [matDatepicker]="picker"
+            placeholder="Fecha de Nacimiento" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <mat-form-field>
+            <mat-label>
+              Sexo
+            </mat-label>
+            <select formControlName="signUpSexo" matNativeControl required>
+              <option value="1">Masculino</option>
+              <option value="2">Femenino</option>
+            </select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <button mat-flat-button color="primary" (click)="CrearUsuario()">Ingresar</button>
+      </div>
     </div>
-    <div layout-padding layout-margin>
-      <form name="registro" flex>
-        <mat-form-field flex>
-          <input matInput placeholder="Primer Apellido" />
-        </mat-form-field>
-
-        <mat-form-field flex>
-          <input matInput placeholder="Segundo Apellido" />
-        </mat-form-field>
-
-      </form>
-    </div>
-
-
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" />
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
   </mat-card-content>
 </mat-card>
