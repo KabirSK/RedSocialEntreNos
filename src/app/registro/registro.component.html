@@ -1,6 +1,10 @@
-<mat-card>
-  <mat-card-title>Bienvenido</mat-card-title>
-  <mat-card-subtitle>Ingrese los datos para crear su cuenta</mat-card-subtitle>
+<mat-card class="card">
+  <mat-card-title >
+    <div class="titulo">Bienvenido</div>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <div class="subtitulo">Ingrese los datos para crear su cuenta</div>
+  </mat-card-subtitle>
   <mat-card-content>
     <div layout-padding layout-margin>
       <div [formGroup]="singupFormGroup">
@@ -15,9 +19,14 @@
         <mat-form-field flex>
           <input formControlName="signUpPrimerNombre" matInput placeholder="Primer Nombre" />
         </mat-form-field>
+<<<<<<< HEAD
+=======
+        &nbsp;
+>>>>>>> f46001f3391a1e745537ac8e5f7144a5259c5bd6
         <mat-form-field flex>
           <input formControlName="signUpSegundoNombre" matInput placeholder="Segundo Nombre" />
         </mat-form-field>
+<<<<<<< HEAD
         <div layout-padding layout-margin>
           <mat-form-field flex>
             <input formControlName="signUpPrimerApellido" matInput placeholder="Primer Apellido" />
@@ -53,5 +62,46 @@
         <button mat-flat-button color="primary" (click)="CrearUsuario()">Ingresar</button>
       </div>
     </div>
+=======
+      </form>
+    </div>
+    <div layout-padding layout-margin>
+      <form name="registro" flex>
+        <mat-form-field flex>
+          <input matInput placeholder="Primer Apellido" />
+        </mat-form-field>
+        &nbsp;
+        <mat-form-field flex class="">
+          <input matInput placeholder="Segundo Apellido" />
+        </mat-form-field>
+      </form>
+    </div>
+    <div layout-padding layout-margin>
+      <form name="registro" flex>
+        <mat-form-field flex>
+          <mat-label>Sexo</mat-label>
+          <mat-select>
+            <mat-option value="0">-</mat-option>
+            <mat-option value="1">Femenino</mat-option>
+            <mat-option value="2">Masculino</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </div>
+    <div layout-padding layout-margin>
+      <form name="registro" flex class="formulario-full-width">
+        <mat-form-field flex>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </div>
+    <div layout-padding layout-margin>
+      <form name="registro" flex>
+            <button mat-raised-button color="primary">Registrar</button>
+      </form>
+    </div>
+>>>>>>> f46001f3391a1e745537ac8e5f7144a5259c5bd6
   </mat-card-content>
 </mat-card>
